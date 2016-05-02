@@ -42,7 +42,7 @@ SystemJS.config({
     "process": "github:jspm/nodelibs-process@0.2.0-alpha",
     "react": "npm:react@15.0.1",
     "react-dom": "npm:react-dom@15.0.1",
-    "react-hot-loader": "npm:react-hot-loader@3.0.0-beta.0",
+    "react-hot-loader": "npm:react-hot-loader@3.0.0-beta.1",
     "stream": "github:jspm/nodelibs-stream@0.2.0-alpha",
     "string_decoder": "github:jspm/nodelibs-string_decoder@0.2.0-alpha",
     "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@0.5.7",
@@ -53,6 +53,28 @@ SystemJS.config({
     "zlib": "github:jspm/nodelibs-zlib@0.2.0-alpha"
   },
   packages: {
+    "npm:global@4.3.0": {
+      "map": {
+        "min-document": "npm:min-document@2.18.0",
+        "node-min-document": "npm:min-document@2.18.0",
+        "process": "npm:process@0.5.2"
+      }
+    },
+    "npm:min-document@2.18.0": {
+      "map": {
+        "dom-walk": "npm:dom-walk@0.1.1"
+      }
+    },
+    "npm:react-hot-loader@3.0.0-beta.1": {
+      "map": {
+        "babel-template": "npm:babel-template@6.7.0",
+        "global": "npm:global@4.3.0",
+        "react-deep-force-update": "npm:react-deep-force-update@2.0.1",
+        "react-proxy": "npm:react-proxy@3.0.0-alpha.1",
+        "redbox-react": "npm:redbox-react@1.2.3",
+        "source-map": "npm:source-map@0.4.4"
+      }
+    },
     "npm:babel-code-frame@6.7.7": {
       "map": {
         "babel-runtime": "npm:babel-runtime@5.8.38",
@@ -77,15 +99,6 @@ SystemJS.config({
         "esutils": "npm:esutils@2.0.2",
         "lodash": "npm:lodash@3.10.1",
         "to-fast-properties": "npm:to-fast-properties@1.0.2"
-      }
-    },
-    "npm:react-hot-loader@3.0.0-beta.0": {
-      "map": {
-        "babel-template": "npm:babel-template@6.7.0",
-        "react-deep-force-update": "npm:react-deep-force-update@2.0.1",
-        "react-proxy": "npm:react-proxy@3.0.0-alpha.1",
-        "redbox-react": "npm:redbox-react@1.2.3",
-        "source-map": "npm:source-map@0.4.4"
       }
     },
     "npm:react-proxy@3.0.0-alpha.1": {

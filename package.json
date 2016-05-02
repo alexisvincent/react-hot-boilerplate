@@ -40,7 +40,7 @@
     "dependencies": {
       "react": "npm:react@^15.0.1",
       "react-dom": "npm:react-dom@^15.0.1",
-      "react-hot-loader": "npm:react-hot-loader@3.0.0-beta.0"
+      "react-hot-loader": "npm:react-hot-loader@3.0.0-beta.1"
     },
     "devDependencies": {
       "babel-plugin-transform-react-jsx": "npm:babel-plugin-transform-react-jsx@^6.7.5",
