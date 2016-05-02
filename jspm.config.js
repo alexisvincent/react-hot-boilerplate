@@ -8,10 +8,10 @@ SystemJS.config({
         "*.js": {
           "babelOptions": {
             "plugins": [
-              "babel-plugin-transform-react-jsx"
+              "babel-plugin-transform-react-jsx",
+              "react-hot-loader/babel"
             ]
-          },
-          // loader: 'react-hot-loader/system'
+          }
         }
       }
     }
@@ -42,7 +42,7 @@ SystemJS.config({
     "process": "github:jspm/nodelibs-process@0.2.0-alpha",
     "react": "npm:react@15.0.1",
     "react-dom": "npm:react-dom@15.0.1",
-    "react-hot-loader": "npm:react-hot-loader@3.0.0-alpha.1",
+    "react-hot-loader": "npm:react-hot-loader@3.0.0-beta.0",
     "stream": "github:jspm/nodelibs-stream@0.2.0-alpha",
     "string_decoder": "github:jspm/nodelibs-string_decoder@0.2.0-alpha",
     "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@0.5.7",
@@ -53,22 +53,49 @@ SystemJS.config({
     "zlib": "github:jspm/nodelibs-zlib@0.2.0-alpha"
   },
   packages: {
-    "npm:error-stack-parser@1.3.5": {
+    "npm:babel-code-frame@6.7.7": {
       "map": {
-        "stackframe": "npm:stackframe@0.3.1"
+        "babel-runtime": "npm:babel-runtime@5.8.38",
+        "chalk": "npm:chalk@1.1.3",
+        "esutils": "npm:esutils@2.0.2",
+        "js-tokens": "npm:js-tokens@1.0.3"
       }
     },
-    "npm:react-hot-loader@3.0.0-alpha.1": {
+    "npm:babel-template@6.7.0": {
       "map": {
+        "babel-runtime": "npm:babel-runtime@5.8.38",
+        "babel-traverse": "npm:babel-traverse@6.7.6",
+        "babel-types": "npm:babel-types@6.7.7",
+        "babylon": "npm:babylon@6.7.0",
+        "lodash": "npm:lodash@3.10.1"
+      }
+    },
+    "npm:babel-types@6.7.7": {
+      "map": {
+        "babel-runtime": "npm:babel-runtime@5.8.38",
+        "babel-traverse": "npm:babel-traverse@6.7.6",
+        "esutils": "npm:esutils@2.0.2",
+        "lodash": "npm:lodash@3.10.1",
+        "to-fast-properties": "npm:to-fast-properties@1.0.2"
+      }
+    },
+    "npm:react-hot-loader@3.0.0-beta.0": {
+      "map": {
+        "babel-template": "npm:babel-template@6.7.0",
         "react-deep-force-update": "npm:react-deep-force-update@2.0.1",
-        "react-proxy": "npm:react-proxy@3.0.0-alpha.0",
+        "react-proxy": "npm:react-proxy@3.0.0-alpha.1",
         "redbox-react": "npm:redbox-react@1.2.3",
         "source-map": "npm:source-map@0.4.4"
       }
     },
-    "npm:react-proxy@3.0.0-alpha.0": {
+    "npm:react-proxy@3.0.0-alpha.1": {
       "map": {
         "lodash": "npm:lodash@4.11.1"
+      }
+    },
+    "npm:error-stack-parser@1.3.5": {
+      "map": {
+        "stackframe": "npm:stackframe@0.3.1"
       }
     },
     "npm:redbox-react@1.2.3": {
@@ -129,19 +156,10 @@ SystemJS.config({
         "zlib-browserify": "npm:browserify-zlib@0.1.4"
       }
     },
-    "npm:babel-code-frame@6.7.5": {
-      "map": {
-        "babel-runtime": "npm:babel-runtime@5.8.38",
-        "chalk": "npm:chalk@1.1.3",
-        "esutils": "npm:esutils@2.0.2",
-        "js-tokens": "npm:js-tokens@1.0.3",
-        "repeating": "npm:repeating@1.1.3"
-      }
-    },
     "npm:babel-helper-builder-react-jsx@6.7.5": {
       "map": {
         "babel-runtime": "npm:babel-runtime@5.8.38",
-        "babel-types": "npm:babel-types@6.7.2",
+        "babel-types": "npm:babel-types@6.7.7",
         "esutils": "npm:esutils@2.0.2",
         "lodash": "npm:lodash@3.10.1"
       }
@@ -170,25 +188,16 @@ SystemJS.config({
     },
     "npm:babel-traverse@6.7.6": {
       "map": {
-        "babel-code-frame": "npm:babel-code-frame@6.7.5",
+        "babel-code-frame": "npm:babel-code-frame@6.7.7",
         "babel-messages": "npm:babel-messages@6.7.2",
         "babel-runtime": "npm:babel-runtime@5.8.38",
-        "babel-types": "npm:babel-types@6.7.2",
+        "babel-types": "npm:babel-types@6.7.7",
         "babylon": "npm:babylon@6.7.0",
         "debug": "npm:debug@2.2.0",
         "globals": "npm:globals@8.18.0",
         "invariant": "npm:invariant@2.2.1",
         "lodash": "npm:lodash@3.10.1",
         "repeating": "npm:repeating@1.1.3"
-      }
-    },
-    "npm:babel-types@6.7.2": {
-      "map": {
-        "babel-runtime": "npm:babel-runtime@5.8.38",
-        "babel-traverse": "npm:babel-traverse@6.7.6",
-        "esutils": "npm:esutils@2.0.2",
-        "lodash": "npm:lodash@3.10.1",
-        "to-fast-properties": "npm:to-fast-properties@1.0.2"
       }
     },
     "npm:babylon@6.7.0": {

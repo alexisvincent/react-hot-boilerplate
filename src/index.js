@@ -1,5 +1,5 @@
 import 'systemjs-hot-reloader/default-listener.js';
-import 'react-hot-loader/patch'; // Need to do this?
+import 'react-hot-loader/patch';
 import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -8,9 +8,9 @@ import Layout from './Layout';
 
 const rootEl = document.getElementById('root');
 
-let render = () => 
+let render = () =>
     ReactDOM.render(
-      <AppContainer component={App} />,
+      <AppContainer><App /></AppContainer>,
       rootEl
     );
 
