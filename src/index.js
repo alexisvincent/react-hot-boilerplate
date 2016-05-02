@@ -8,14 +8,7 @@ import Layout from './Layout';
 
 const rootEl = document.getElementById('root');
 
-let render = () =>
-    ReactDOM.render(
-      <AppContainer><App /></AppContainer>,
-      rootEl
-    );
-
-export function __reload() {
-    render();
-}
-
-render();
+ReactDOM.render(
+    <AppContainer><App /></AppContainer>,
+    rootEl
+);
